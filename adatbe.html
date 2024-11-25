@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tanulók Adatai</title>
+</head>
+<body>
+    <script>
+        function main() {
+            const students = [];
+            const numberOfStudents = parseInt(prompt("Hány adatot szeretnél megadni?"));
+
+            for (let i = 0; i < numberOfStudents; i++) {
+                const name = prompt(`Név (${i+1}/${numberOfStudents}):`);
+                const email = prompt(`E-mail (${i+1}/${numberOfStudents}):`);
+                students.push({ name, email });
+            }
+
+            document.write("A tanulók adatai:<br>");
+            students.forEach(student => {
+                document.write(`<br>Név: ${student.name} <br>E-mail: ${student.email}`);
+            });
+        }
+
+        main();
+    </script>
+</body>
+</html>

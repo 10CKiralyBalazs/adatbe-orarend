@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Heti Órarend</title>
+</head>
+<body>
+    <script>
+        
+        const schedule = [
+            { day: 'Hétfő', classes: ['Matematika', 'Angol', 'Fizika'] },
+            { day: 'Kedd', classes: ['Történelem', 'Biológia', 'Testnevelés'] },
+            { day: 'Szerda', classes: ['Kémia', 'Matematika', 'Földrajz'] },
+            { day: 'Csütörtök', classes: ['Magyar', 'Informatika', 'Zene'] },
+            { day: 'Péntek', classes: ['Rajz', 'Francia', 'Filozófia'] }
+        ];
+
+       
+        function printSchedule() {
+            document.write('Heti Órarend:<br>');
+            schedule.forEach(daySchedule => {
+                document.write(`<br>${daySchedule.day}:<br>`);
+                daySchedule.classes.forEach(subject => {
+                    document.write(`  - ${subject}<br>`);
+                });
+            });
+        }
+
+        printSchedule();
+    </script>
+</body>
+</html>
